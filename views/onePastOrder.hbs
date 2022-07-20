@@ -1,0 +1,79 @@
+
+<section id = "confirmPage">
+    <div class = "header">
+        <h1>Your Past Order Details</h1>
+    </div>
+    <h2 class = "vanID"> {{thisOrder._vanID.name}}</h2>
+    <h3 class = "orderTime"> {{orderDate}}</h3>
+    <div class="orderStatus">
+        <h2 class="statusTitle">{{thisOrder.status}}</h2>
+    </div>
+    <h2 class="itemTitle">Order Summary:</h3>
+    {{#listitem thisOrder.items}}{{/listitem}}
+    <h3>Subtotal: ${{thisOrder.subTotal}} </h3>
+    <h2>Order Total: ${{thisOrder.totalPrice}}</h2> 
+    {{#note thisOrder.note}}{{/note}}
+    {{#if rated}}
+    <div class="display-rate-result-div">
+        {{#displayRating thisOrder}}{{/displayRating}}      
+    </div>
+    {{#comment thisOrder.comment}}{{/comment}}
+    
+    <div class = "buttonDiv-alt">
+        <form action="/customer/menu" method="GET">
+            <button type="submit" class="seemypastorders" >Back to Menu &#9749; </button>
+        </form>
+    </div>
+    {{else}}
+    <script>
+        function openRating() {
+            document.getElementById("addNoteForm").style.display = "block";
+        }
+
+        function closeRating() {
+            document.getElementById("addNoteForm").style.display = "none";
+        } 
+
+        function saveRating() {
+            const rate = document.getElementById("selectRates").value
+            if (value){
+                document.getElementById("addNoteForm").style.display = "none";
+            }
+        } 
+    </script>
+    <div id="addNoteForm" class="formPopup" style="display: none">
+        <button class="formClose" onclick="closeRating()">x</button>
+        <form action="/customer/rateOrder/{{thisOrder._id}}" class="form-container" method="POST">
+            {{!-- <select name="rating" id="selectRates" class="customize-input w-select" required>
+                <option value="">Select a rate</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select> --}}
+            <div class="star-rating">
+                <input type="radio" value="5" name="rating" id="star-1"><label for="star-1"></label>
+                <input type="radio" value="4" name="rating" id="star-2"><label for="star-2"></label>
+                <input type="radio" value="3" name="rating" id="star-3"><label for="star-3"></label>
+                <input type="radio" value="2" name="rating" id="star-4"><label for="star-4"></label>
+                <input type="radio" value="1" name="rating" id="star-5"><label for="star-5"></label>
+            </div>
+            <textarea name="comment" type="text" class="formText" placeholder="Add Your Comments Here...">{{thisOrder.comments}}</textarea>
+            <button value="Submit" type="submit" class="formSave" onclick="saveRating()">Rating</button>
+        </form>
+    </div>
+    <div class="buttonDiv">
+        <button class= "addNote" onclick="openRating()">Rate this order</button>
+    </div>
+    <div class = "buttonDiv-alt">
+        <form action="/customer/menu" method="GET">
+            <button type="submit" class="seemypastorders" >Back to Menu &#9749; </button>
+        </form>
+    </div>
+    {{/if}}
+
+</section>
+
+
+

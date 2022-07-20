@@ -1,0 +1,32 @@
+<section id = "confirmPage">
+    <div class = "header">
+        <h1>Your Order Details</h1>
+    </div>
+    <p class = "vanID"> {{thisOrder._vanID.name}}</p>
+    <h2 class="itemTitle">Order Summary:</h2>
+    {{#listitem thisOrder.items}}{{/listitem}}
+    <h2>Order Total: ${{#totalPrice thisOrder.items}}{{/totalPrice}}</h2> 
+    <script>
+        function openForm() {
+            document.getElementById("addNoteForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("addNoteForm").style.display = "none";
+        } 
+    </script>
+    <div id="addNoteForm" class="formPopup" style="display: none">
+        <button class="formClose" onclick="closeForm()">x</button>
+        <form action="/customer/editNote" class="form-container" method="POST">
+            <textarea name="note" type="text" class="formText" placeholder="Add Your Note Here...">{{thisOrder.note}}</textarea>
+            <button value="Submit" type="submit" class="formSave" onclick="closeForm()">Save</button>
+        </form>
+    </div>
+    <div class="buttonDiv">
+        <button class= "addNote" onclick="openForm()">Add Note</button>
+    </div>
+    {{#note thisOrder.note}}{{/note}}
+    <form action = "/customer/confirmOrder" method ="GET" class="buttonDiv">
+        <input type="submit" class="confirmButton" value = "Place your order • $ {{#totalPrice thisOrder.items}}{{/totalPrice}}"></input>
+    </form>
+</section>

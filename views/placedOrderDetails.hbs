@@ -1,0 +1,33 @@
+<section id = "confirmPage">
+    <div class = "header">
+        <h1>Your Order Status</h1>
+    </div>
+    <h2 class = "vanID"> {{thisOrder._vanID.name}}</h2>
+    <h3 class = "orderTime"> {{orderDate}}</h3>
+    <div class="orderStatus">
+
+        <h2 class="statusTitle">{{orderStatus}}</h2>
+    </div>
+    <h2 class="itemTitle">Order Summary:</h3>
+    {{#listitem thisOrder.items}}{{/listitem}}
+    <h3>Subtotal: ${{thisOrder.subTotal}} </h3>
+    {{#samePrice thisOrder.subTotal thisOrder.totalPrice}}{{/samePrice}}
+    <h2>Order Total: ${{thisOrder.totalPrice}}</h2> 
+    
+        {{#note thisOrder.note}}{{/note}}
+    {{#if changeable}}
+    <div class="orderBlock">
+        <div class="orderBar">
+            <form action="/customer/changeOrder" method ="GET" >
+                <input type="submit" class="changeOrder" value="Change Order" />
+            </form>
+            <form action="/customer/cancelOrder" method ="GET" >
+                <input type="submit" class="cancelOrder" value="Cancel Order" />
+            </form>
+        </div>
+    </div>
+    {{/if}}
+    <div class = "bottomNote">
+        Note: Changing or cancelling order is only allowed within 10 minutes of placing the order and before fulfilled
+    </div>
+</section>

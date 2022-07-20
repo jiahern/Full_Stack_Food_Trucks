@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>hello-zeus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/vendor.css" />
+</head>
+
+
+
+{{!-- Navigation bar --}}
+
+<body id="app-container">
+    <nav class="navbar fixed-top"></nav>
+    </nav>
+
+
+    {{!-- left-menu --}}
+    <div class="menu">
+        <div class="main-menu">
+            <div class="scroll">
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="/vendor/home">
+                            <span>Start</span>
+                        </a>
+                    </li>
+                    <li class ="active">
+                        <a href="/vendor/fulfilling">
+                            Order
+                        </a>
+                    </li>
+                    <li>
+                        <form action="/vendor/logout" method="GET" id="logout-button">
+                            <button class="btn btn-primary" >logout</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        {{!-- left sub-menu--}}
+
+        <div class="sub-menu">
+            <div class="scroll">
+                <ul class="list-unstyled">
+                    <li class ="active">
+                        <a href="/vendor/fulfilling">
+                            <span>Fulfilling Order</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/vendor/fulfilled">
+                            Ready-to-Pickup
+                        </a>
+                    </li>
+                    <li >
+                        <a href="/vendor/complete">
+                            <span>Completed Order</span>
+                        </a>
+                    </li>
+                </ul>                 
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="word">
+                    <h1>Order Details</h1>
+                    <h2 style = "text-transform:capitalize;" class= "wordfront">Order Status: {{thisOrder.status}}</h2>
+                    
+                    <h3 style = "color: red";  id="demo"></h3>
+
+                    <script>
+                    // Set the date we're counting down to
+                    const endDiscount = "{{{discountLeftTime}}}"
+                   
+
+                    var countDownDate = endDiscount
+                    // Update the count down every 1 second
+                    var x = setInterval(function() {
+
+                        // Get today's date and time
+                        var now = new Date().getTime();
+                            
+                        // Find the distance between now and the count down date
+                        var distance = countDownDate - now;
+                            
+                        // Time calculations for days, hours, minutes and seconds
+                        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                            
+                        // Output the result in an element with id="demo"
+                        document.getElementById("demo").innerHTML = //countDownDate
+                        "Times Remaining: "  + minutes + "m " + seconds + "s ";
+                            
+                        // If the count down is over, write some text 
+                        if (distance < 0) {
+                            clearInterval(x);
+                            document.getElementById("demo").innerHTML = //countDownDate
+                            "Time Remaining: Discount Applied";
+                        }
+                    }, 1000);
+                    </script>
+                    
+
+                        
+                        
+
+                    <div class="separator mb-5"></div>
+
+                </div>
+            </div>
+            
+            <div class="col-lg-6 col-md-12 mb-4">
+                <div class = "card">
+                    {{#listFulfillingitem thisOrder.items}}{{/listFulfillingitem}}
+                    <div class= "card-body">
+                        <h3>Note: {{thisOrder.note}}</h3>
+                        <h3>Subtotal:  ${{thisOrder.subTotal}} </h3>
+                        <h3>{{#samePrice thisOrder.subTotal thisOrder.totalPrice}}{{/samePrice}}</h3>
+
+                        <h2>Order Total: ${{thisOrder.totalPrice}}</h2> 
+                    
+                    <form method="POST", action="/vendor/updateToFulfilled/{{oneOrderID}}">
+                        <button type= "submit" class="btn btn-primary" >Ready to Pickup</button>
+                    </form>
+                    </div>
+                </div>
+
+            </div>       
+        
+        </div>
+    </main>
+
+</body>    
+
+</html> 

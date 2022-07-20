@@ -1,0 +1,372 @@
+a{
+    color: rgb(105, 103, 103);
+    text-decoration: none;
+}
+
+body{
+    margin: 0;
+}
+
+html{
+    font-size: 25px;
+}
+
+
+/* navigation bar section */
+#navi-block{
+    height: 80px
+}
+
+#navi{
+    display: flex;  
+    margin-left: auto;
+    width: 92%;
+}
+
+#name{
+    margin-top: auto;
+    margin-bottom: auto;
+    color: rgb(105, 103, 103);
+    font-size: 0.6rem;
+}
+
+#navi-items{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20%;
+}
+
+#item-list{
+    list-style: none;
+}
+
+#item-list li{
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    font-size: 0.6rem;
+}
+
+#item-list li a:hover{
+    color:black;
+}
+
+.cart ion-icon {
+    vertical-align: bottom;
+    font-size: 20px;
+    padding-right: 5px;
+}
+
+/* .cart a {
+    background-color: rgb(105, 103, 103);
+    color: #fff;
+    margin: 1px;
+    cursor: pointer;
+    text-decoration: none;
+} */
+
+
+/* main pictures */
+#picture-block{
+    position: relative;
+    text-align: center;
+    height: 700px;
+}
+
+#main-pic{
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(41, 40, 40);
+}
+
+#big-picture{
+    width: 100%;
+    height: 100%;
+    /* max-width: 100%;
+    max-height: 100%; */
+
+
+    filter:blur(5px);
+    -webkit-filter:blur(5px);
+    -moz-filter:blur(5px);
+    -ms-filter:blur(5px);
+    -o-filter:blur(5px);
+    
+    z-index:99999999999;
+    opacity:0.7;
+    filter:alpha(opacity=60);
+}
+
+#picture-text-div{
+    position: absolute;
+    width: 100%;
+    top: 250px;
+    color: white;
+}
+
+#main-pic-title{
+    font-size: 1rem;
+    letter-spacing: 10px;
+    line-height: 0px;
+}
+
+#main-pic-title2{
+    font-weight: bold;
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+}
+
+
+
+
+/* menu part */
+
+#menu-title{
+    margin-top: 60px;
+    width: 100%;
+    text-align: center;
+    /* align-items: center; */
+}
+
+#menu-title p{
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 0px;
+    color: rgb(105, 103, 103);
+}
+
+#menu-display{
+    text-align: center;
+    margin-top: 40px;
+}
+
+#menu-grid{
+    width: 1240px;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    grid-template-rows: 400px 400px;
+    grid-column-gap: 80px;
+    /* grid-row-gap: 40px; */
+}
+
+#menu-grid p{
+    font-size: 0.8rem;
+}
+
+.menu-pic{
+    width: 250px;
+    height: 250px;
+}
+
+
+.button-cart {
+    border: 1px solid gray;
+    color: gray;
+    background: none;
+    padding: 5px 20px;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+
+/* ---------------------- CART DETAILS PAGE ----------------------*/
+
+.product-container {
+    max-width: 650px;
+    justify-content: space-around;
+    border-top: 4px solid lightgray;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.product-container ion-icon {
+    font-size: 25px;
+    color: blue;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.product-header {
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+}
+
+.product-title {
+    width: 45%;
+    border-bottom: 4px solid lightgray;
+}
+
+.product ion-icon {
+    cursor: pointer;
+}
+
+.product {
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid lightgray;
+}
+
+.price {
+    width: 15%;
+    border-bottom: 4px solid lightgray;
+    display: flex;
+    align-items: center;
+}
+
+.quantityCart {
+    width: 30%;
+    border-bottom: 4px solid lightgray;
+    display: flex;
+    align-items: center;
+}
+
+.total {
+    width: 10%;
+    border-bottom: 4px solid lightgray;
+    display: flex;
+    align-items: center;
+}
+
+.products {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.products img {
+    width: 75px;
+}
+
+.basketTotalContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.basketTotalTitle {
+    width: 30%;
+}
+
+.basketTotal {
+    width: 10%;
+}
+
+
+/* -----------------Below are the parts for hidden elements--------------------- */
+
+/* hidden part from the desktop view */
+#header-phone{
+    position: fixed;
+    display: none;
+    z-index: 99999;
+    width: 100%;
+    text-align: center;
+}
+
+#header-name{
+    left: 50%
+    /* background-color: royalblue; */
+}
+
+#header-name p{
+   font-size: 0.7rem;
+   font-weight: bold;
+   color: rgb(105, 103, 103)
+}
+
+
+
+/* -----------------Below are the part for responsive design--------------------- */
+/* responsive */
+@media screen and (max-width: 600px){
+
+    #navi-block{display: none}
+
+    #header-phone{
+        display: block;
+        background-color: white;
+
+    }
+
+    /* main picture part (phone ver.) */
+    #main-pic{
+        height: 500px;
+    }
+
+    #picture-text-div{
+        position: absolute;
+        width: 100%;
+        top: 200px;
+        color: white;
+    }
+    
+    #main-pic-title{
+        font-size: 0.6rem;
+        letter-spacing: 10px;
+        line-height: 0px;
+    }
+    
+    #main-pic-title2{
+        font-weight: bold;
+        font-size: 1rem;
+        letter-spacing: 4px;
+    }
+
+    /* menu part (phone ver.) */
+    #menu-title{
+        margin-top: -180px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    #menu-title p{
+        font-size: 0.8rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+        line-height: 0px;
+        color: rgb(105, 103, 103);
+    }
+    
+    #menu-display{
+        text-align: center;
+        margin-top: 40px;
+    }
+    
+    #menu-grid{
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #menu-grid p{
+        font-size: 0.8rem;
+        margin-bottom: 60px;
+    }
+    
+    .menu-pic{
+        width: 80%;
+        height: 250px;
+        margin-bottom: -20px;
+    }   
+}
+
+
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>hello-zeus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/vendor.css" />
+</head>
+
+<body onload="getLocation()" class="app-container">
+    <nav class="navbar fixed-top">
+        <div class = "scroll">
+            <h2 class = "navbar-right">Van ID: {{vanID}}<br>Van Status: {{vanStatus}}</h2>
+            </div>>
+    </nav>
+    
+    <div class="menu">
+        <div class="main-menu">
+            <div class="scroll">
+                <ul class="list-unstyled">
+                    <li class ="active">
+                        <a href="/vendor/home">
+                            <span>Start</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/vendor/fulfilling">
+                            Order
+                        </a>
+                    </li>
+                    <li>
+                        <form action="/vendor/logout" method="GET" id="logout-button">
+                            <button class="btn btn-primary" >logout</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sub-menu">
+            <div class="scroll">
+                <ul class="list-unstyled">
+                    <li class ="active">
+                        <a href="/vendor/openVan">
+                            <span>Open store</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/vendor/closeVanPage">
+                            Close store
+                        </a>
+                    </li>
+                </ul>                 
+            </div>
+        </div>
+    </div>
+    
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="word">
+                    <h1 >Welcome Back! Input address to open your business</h1>
+                    <div class="separator mb-5"></div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <script>
+                                function getLocation() {
+                                    if (navigator.geolocation) {
+                                        navigator.geolocation.getCurrentPosition(function(position){
+                                            document.getElementById("longitude_V").value = position.coords.longitude
+                                            document.getElementById("latitude_V").value = position.coords.latitude 
+                                        });
+                                    }
+                                }
+                            </script>
+                            <form method="POST" action="/vendor/setVanStatus/">
+                                <div class="form-group position-relative error-l-100">
+                                    <label for="address">Current address</label>
+                                    <input id = "textLocation" name = "textLocation" type="address" class="form-control" placeholder="Enter your address in text">
+                                    <input id = "longitude_V" name = "longitude" type = "hidden" value="">
+                                    <input id = "latitude_V" name = "latitude" type = "hidden" value="">
+                                </div>
+                                    <button class="btn btn-primary" type="submit">submit</button>
+                            </form>   
+                        </div>
+                    </div>
+                </div>
+            </div>    
+
+        </div>      
+
+    </main>        
+</body>    
+
+</html> 
+ 

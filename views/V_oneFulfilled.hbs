@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>hello-zeus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/vendor.css" />
+</head>
+
+
+
+{{!-- Navigation bar --}}
+
+<body id="app-container">
+    <nav class="navbar fixed-top"></nav>
+    </nav>
+
+
+    {{!-- left-menu --}}
+    <div class="menu">
+        <div class="main-menu">
+            <div class="scroll">
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="/vendor/home">
+                            <span>Start</span>
+                        </a>
+                    </li>
+                    <li class ="active">
+                        <a href="/vendor/fulfilling">
+                            Order
+                        </a>
+                    </li>
+                    <li>
+                        <form action="/vendor/logout" method="GET" id="logout-button">
+                            <button class="btn btn-primary" >logout</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        {{!-- left sub-menu--}}
+
+        <div class="sub-menu">
+            <div class="scroll">
+                <ul class="list-unstyled">
+                    <li >
+                        <a href="/vendor/fulfilling">
+                            <span>Fulfilling Order</span>
+                        </a>
+                    </li>
+                    <li class ="active">
+                        <a href="/vendor/fulfilled">
+                            Ready-to-Pickup
+                        </a>
+                    </li>
+                    <li >
+                        <a href="/vendor/complete">
+                            <span>Completed Order</span>
+                        </a>
+                    </li>
+                </ul>                 
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="word">
+                    <h1 >Order Details</h1>
+                    <h2 style = "text-transform:capitalize;" class= "wordfront">Order Status: {{thisOrder.status}}</h2>
+
+                    <div class="separator mb-5"></div>
+
+                </div>
+            </div>
+            
+            <div class="col-lg-6 col-md-12 mb-4">
+                <div class = "card">
+                    {{#listFulfilleditem thisOrder.items}}{{/listFulfilleditem}}
+                    <div class= "card-body">
+                        <h3>Note: {{thisOrder.note}}</h3>
+                        <h3>Subtotal:  ${{thisOrder.subTotal}} </h3>
+                        <h3>{{#samePrice thisOrder.subTotal thisOrder.totalPrice}}{{/samePrice}}</h3>
+                        <h2>Order Total: ${{thisOrder.totalPrice}}</h2> 
+                    <form method="POST", action="/vendor/updateToCompleted/{{oneOrderID}}">
+                        <button type= "submit" class="btn btn-primary" >Picked up</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        
+        
+        </div>
+    </main>
+
+</body>    
+
+</html> 

@@ -1,0 +1,21 @@
+<section id = "confirmPage">
+    <div class = "header">
+        <h1>Shopping Cart &#128722;</h1>
+    </div>
+
+    <p class = "vanID"> {{thisOrder._vanID.name}}</p>
+    
+    <h2 class="itemTitle">Order Summary:</h2>
+    {{#cartListitem thisOrder}}{{/cartListitem}}
+    <h2>Order Total: ${{#totalPrice thisOrder.items}}{{/totalPrice}}</h2> 
+    
+    <div class="buttonDiv">
+        <form action="/customer/menu" method="GET">
+            <button type="submit" class="continueshopping" >Continue Shopping</button>
+        </form>
+        
+        <form action="/customer/customerOngoingOrder" method="GET">
+            <button type="submit" class="createOrderBtn" >Checkout Order</button>
+        </form>
+    </div>
+</section>

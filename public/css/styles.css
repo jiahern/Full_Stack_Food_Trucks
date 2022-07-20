@@ -1,0 +1,1005 @@
+/* css variables */
+@font-face {
+    font-family: 'Roboto-thin';
+    src: url(./fontbook/Roboto/Roboto-Thin.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto-black';
+    src: url(./fontbook/Roboto/Roboto-Black.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto-medium';
+    src: url(./fontbook/Roboto/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto-regular';
+    src: url(./fontbook/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto-light';
+    src: url(./fontbook/Roboto/Roboto-Light.ttf);
+}
+
+:root {
+    --text-web-big: 36px;
+    --text-web-big-2: 30px;
+    --text-web-medium: 26px;
+    --text-web-small: 21px;
+    --font-body: 'Robote-regular',sans-serif;
+    --font-heading: 'Roboto-black',sans-serif;
+    --font-heading-2: 'Roboto-medium',sans-serif;
+    --font-heading-3: 'Roboto-regular',sans-serif;
+    --color-dark:#2d2d2b;
+    --color-medium: #626260;
+    --color-grey:#707070;
+    --color-light-grey:#E7E7E7;
+    --color-light:#EAE6DF;
+    
+}
+
+#confirmPage h1{
+    text-align: center;
+    font-size: var(--text-web-big);
+    font-family: var(--font-heading);
+    color: var(--color-dark);
+}
+
+#confirmPage h2{
+    text-align: center;
+    font-size: var(--text-web-medium);
+    font-family: var(--font-heading-2);
+    color: var(--color-dark);
+}
+
+#confirmPage h3{
+    text-align: center;
+    font-size: var(--text-web-small);
+    font-family: var(--font-heading-3);
+    color: var(--color-dark);
+}
+
+#confirmPage .header{
+    text-align: center;
+    font-size: var(--text-web-big);
+    font-family: var(--font-heading);
+    color: var(--color-dark);
+    background: white;
+    padding: 0.5px;
+    -webkit-box-shadow: 0 10px 5px var(--color-light-grey);
+    -moz-box-shadow: 0 10px 5px var(--color-light-grey);
+    box-shadow: 0 10px 5px var(--color-light-grey);
+    
+    background-color: white;
+        /*animation time for different browsers*/
+        -webkit-animation: fadein 1.5s;
+        /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein 1.5s;
+        /* Firefox < 16 */
+        -ms-animation: fadein 1.5s;
+        /* Internet Explorer */
+        -o-animation: fadein 1.5s;
+        /* Opera < 12.1 */
+        animation: fadein 1.5s;
+      }
+      /*setting the opacity to fade in from 0 to 1, aka from transparent to opaque*/
+      @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      /* Firefox < 16 */
+      @-moz-keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      /* Safari, Chrome and Opera > 12.1 */
+      @-webkit-keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      /* Internet Explorer */
+      @-ms-keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      /* Opera < 12.1 */
+      @-o-keyframes fadein {
+        from {
+          opacity: 0;
+        }
+      }
+    
+
+
+#confirmPage .statusTitle{
+    text-transform: capitalize;
+}
+
+#confirmPage .vanID{
+    text-align: center;
+    font-size: var(--text-web-big-2);
+    font-family: var(--font-heading);
+    color: var(--color-dark);
+    margin-top: 2%;
+    margin-bottom: 3%;
+    text-transform: capitalize;
+}
+
+#confirmPage .orderTime{
+    margin-top: -1%;
+} 
+
+#confirmPage .orderStatus {
+    font-family: var(--font-body);
+    font-size: var(--text-web-small);
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    text-align: center;
+    padding: 5px;
+    border-radius: 9px;
+    -webkit-box-shadow: 0 5px 3px var(--color-light-grey);
+    -moz-box-shadow: 0 5px 3px var(--color-light-grey);
+    box-shadow: 0 5px 3px var(--color-light-grey);
+    
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    margin-top: 1%;
+    margin-bottom: 3%;
+
+  }
+
+#confirmPage .itemTitle{
+    text-align: left;
+    padding-left: 13%;
+    padding-top: -3%;
+}
+
+#confirmPage .itemInfo{
+    font-family: var(--font-body);
+    float: right;
+    font-size: 28px;
+    white-space: pre;
+}
+
+#confirmPage .itemImage{
+    padding-top: 30px;
+    vertical-align:middle;
+    padding-right: 10px;
+    float: left;
+    object-fit: cover;
+    max-width: 60px;
+}
+
+
+#confirmPage .line {
+    opacity: 50%;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    display: inline-block;
+    border-top: 1px solid var(--color-dark);
+    width: 80%;
+  }
+#confirmPage .transparent{
+    opacity: 50%;
+    font-family: var(--font-body);
+    font-size: var(--text-web-small);
+    
+}
+
+#confirmPage .confirmButton {
+    cursor: pointer;
+    padding: 15px;
+    text-align: center;
+    align-items: center;
+    background-color: var(--color-dark);
+    color: white;
+    font-size: var(--text-web-medium);
+    display: inline-block;
+    border-radius: 9px;
+    margin-bottom: 8%;
+    border:none;
+}
+
+#confirmPage .createOrderBtn {
+  width: 300px;
+  cursor: pointer;
+  padding: 15px;
+  text-align: center;
+  align-items: center;
+  background-color: var(--color-dark);
+  color: white;
+  font-size: var(--text-web-medium);
+  display: inline-block;
+  border-radius: 9px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 8%;
+  border:none;
+}
+
+#confirmPage .continueshopping {
+  width: 300px;
+  cursor: pointer;
+  padding: 15px;
+  text-align: center;
+  align-items: center;
+  background-color: var(--color-dark);
+  color: white;
+  font-size: var(--text-web-medium);
+  border-radius: 9px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 8%;
+  border:none;
+}
+
+#confirmPage .no-placed-order-text-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70vh
+}
+
+#confirmPage .no-past-orders{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70vh
+}
+
+#confirmPage .buttonDiv-alt{
+  margin-top: -3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#confirmPage .seemypastorders{
+  width: 300px;
+  cursor: pointer;
+  padding: 15px;
+  text-align: center;
+  align-items: center;
+  background-color: var(--color-dark);
+  color: white;
+  font-size: var(--text-web-medium);
+  border-radius: 9px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  border:none;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+#confirmPage .buttonDiv{
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#confirmPage .noitems{
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#confirmPage .noitems #noitems-text{
+  font-size: 30px;
+}
+
+#confirmPage .confirmContainer {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:stretch;
+    margin-left: 8%;
+    margin-top: -3%;
+}
+
+#confirmPage .havent-signed-in{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70vh
+}
+
+#confirmPage .signin-now{
+  width: 300px;
+  cursor: pointer;
+  padding: 15px;
+  text-align: center;
+  align-items: center;
+  background-color: var(--color-dark);
+  color: white;
+  font-size: var(--text-web-medium);
+  border-radius: 9px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  border:none;
+}
+
+
+#confirmPage .singleItem {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    padding:10px;
+    border: solid;
+    border-radius: 9px;
+    border-color: #967d665b;
+    border-width: 2px;
+}
+
+#confirmPage .pastorders-outer-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#confirmPage .singleOrders {
+  width: 60vw;
+  margin-bottom: 3%;
+  margin-top: 3%;
+  padding:10px;
+  padding-left: 3%;
+  border: solid;
+  border-radius: 9px;
+  border-color: #967d665b;
+  border-width: 2px;
+}
+
+#confirmPage .order-van-name{
+  font-size: 20px;
+}
+
+#confirmPage .order-itemnum, .order-establish-time{
+  font-size: 10px;
+  font-weight: bold;
+}
+
+#confirmPage .backtomenu{
+  width: 300px;
+  cursor: pointer;
+  padding: 15px;
+  text-align: center;
+  align-items: center;
+  background-color: var(--color-dark);
+  color: white;
+  font-size: var(--text-web-medium);
+  border-radius: 9px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border:none;
+}
+
+
+
+#confirmPage .addNote{
+    cursor: pointer;
+    padding: 15px;
+    opacity: 0.8;
+    margin:auto;
+    width:40%;
+    height:auto;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--color-light-grey);
+    color:black;
+    text-align: center;
+    font-size: var(--text-web-medium);
+    margin-bottom: 3%;
+}
+
+
+
+#confirmPage .noteArea {
+    font-family: var(--font-heading-2);
+    font-size: var(--text-web-small);
+    float: none;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    text-align: center;
+    border: 1px solid var(--color-grey);
+    box-shadow: 0px 3px 3px var(--color-light-grey);
+    
+    background-color: white;
+    color: black;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+#confirmPage .orderBar {
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;
+
+}
+
+#confirmPage .changeOrder {
+    cursor: pointer;
+    padding: 15px;
+    text-align: center;
+    align-items: center;
+    background-color: var(--color-light-grey);
+    color: black;
+    font-size: var(--text-web-medium);
+    display: inline-block;
+    margin-left: -9%;
+    border:none;
+    border-radius: 9px;
+
+}
+
+#confirmPage .cancelOrder {
+    cursor: pointer;
+    padding: 15px;
+    text-align: center;
+    align-items: center;
+    background-color: #FF0000;
+    color:white;
+    font-size: var(--text-web-medium);
+    display: inline-block;
+    margin-left: 9%;
+    border:none;
+    border-radius: 9px;
+
+}
+
+.addNote:hover .confirmButton:hover{
+    opacity: 1;
+}
+
+.noOrder{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--text-web-big);
+    font-family: var(--font-heading);
+}
+ 
+
+/* The popup form - hidden by default */
+.formPopup {
+    display: none;
+    position: fixed;
+    bottom: 30%;
+    top: 30%;
+    left: 50%;
+    width: 350px;
+    height: 315px;
+    margin-left: -175px;
+    border-radius: 5%;
+    border: 1px solid var(--color-grey);
+    background-color:var(--color-light);
+    z-index: 9;
+}
+  
+  .formClose{
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    margin-left: 2%;
+    background-color:var(--color-dark);
+    color: white;
+  }
+
+
+
+  /* Add styles to the form container */
+  .form-container {
+    position: relative;
+    display: block;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width:85%;
+    height:70%;    
+  }
+  .form-container .star-rating{
+    display: flex;
+    position: relative;
+    transform: rotateY(180deg);
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+  }
+
+  .form-container .star-rating input{
+    display: none;
+  }
+
+  .form-container .star-rating label{
+    display: block;
+    cursor: pointer;
+    width: 40px;
+  }
+
+  .form-container .star-rating label:before{
+    position: relative;
+    content: '\f005';
+    font-family: fontAwesome;
+    color: #474a55;
+    font-size: 25px;
+    display: block;
+  }
+
+  .form-container .star-rating label:after{
+    position: absolute;
+    content: '\f005';
+    font-family: fontAwesome;
+    color: #ff9900;
+    font-size: 25px;
+    display: block;
+    top: 0px;
+    opacity: 0;
+
+    transition: 0.5s;
+    text-shadow: 0 2px 3px rgb(0,0,.1);
+  }
+
+  .form-container .star-rating label:hover:after{
+    opacity: 1;
+  }
+
+  .form-container .star-rating label:hover:after,
+  .form-container .star-rating input:hover ~ label:after,
+  .form-container .star-rating input:checked ~ label:after{
+    opacity: 1;
+  }
+
+  .display-rate-result-div{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+
+  .rate-display-shine{
+    width: 30px
+  }
+
+  .rate-display-dark{
+    width: 30px
+  }
+
+  .rate-display-shine:before{
+    position: relative;
+    content: '\f005';
+    font-family: fontAwesome;
+    color: #ff9900;
+    font-size: 25px;
+    display: block;
+  }
+
+  .rate-display-dark:before{
+    position: relative;
+    content: '\f005';
+    font-family: fontAwesome;
+    color: #707070;
+    font-size: 25px;
+    display: block;
+  }
+
+  
+  /* Set a style for the submit/login button */
+  .form-container .formSave {
+    font-family: var(--font-heading-3);
+    background-color:var(--color-dark);
+    padding: 10px;
+    color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:40%;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom:20px;
+    border: none;
+    border-radius: 9px;
+    
+  }
+  
+  .form-container .formText {
+    font-family: var(--font-body);
+    position: center;
+    resize: none;
+    display: block;
+    margin-left: -4%;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: auto;
+    width:100%;
+    height:70%;
+    padding:10px;
+    
+  }
+
+
+  .bottomNote {
+    font-family: var(--font-heading-2);
+    font-size: 18px;
+    float: none;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    text-align: center;
+    color: black;
+    margin-top: 2%;
+    margin-bottom: 3%;
+   
+
+  }
+
+  /* Global Hover Effect */
+  .formClose, .formSave, .confirmButton, .singleItem, .addNote, .changeOrder, .cancelOrder, .continueshopping, .createOrderBtn, .seemypastorders, .backtomenu, .singleOrders, .signin-now{
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+  }
+  .formClose:hover, .formSave:hover, .formClose:focus, .formSave:focus, .formClose:active, .formSave:active,
+  .seemypastorders:hover, .seemypastorders:focus, .seemypastorders:active,
+  .backtomenu:hover, .backtomenu:focus, .backtomenu:active,
+  .signin-now:hover, .signin-now:focus, .signin-now:active,
+  .singleOrders:hover, .singleOrders:focus, .singleOrders:active,
+  .continueshopping:hover, .continueshopping:focus, .continueshopping:active,
+  .createOrderBtn:hover, .createOrderBtn:focus, .createOrderBtn:active,
+  .confirmButton:hover, .confirmButton:focus, .confirmButton:active,
+  .singleItem:hover, .singleItem:focus, .singleItem:active,
+  .addNote:hover, .addNote:focus, .addNote:active,
+  .changeOrder:hover, .changeOrder:focus, .changeOrder:active,
+  .cancelOrder:hover, .cancelOrder:focus, .cancelOrder:active
+   {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+
+  #loginPage body{
+    background: #b68462;
+    font-family: 'Open Sans', sans-serif;
+  }
+  #loginPage body a,form li,.submit input[type="submit"],.new h3 a,.new h4 a{
+    transition: 0.1s all;
+    -webkit-transition: 0.1s all;
+    -moz-transition: 0.1s all;
+    -o-transition: 0.1s all;
+  }
+  #loginPage body h1 {
+    color:#fff;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 2.9em;
+  }
+  #loginPage .app-location h2{
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 1.6em;
+    font-weight: 300;
+  }
+  #loginPage .app-location{
+    width:28%;
+    margin:0 auto;
+      text-align: center;
+      background: #323542;
+        padding:4em;
+  }
+  #loginPage .location {
+    padding: 1em 0;
+  }
+  #loginPage .line {
+    position: relative;
+  }
+  #loginPage .line span{
+    position: absolute;
+    top: 10%;
+    left: 39%;
+    background: #5b5c61;
+    height: 1px;
+    width: 20%;
+  }
+  #loginPage form {
+     padding: 0% 1%;
+  }
+  /*-----*/
+  #loginPage .location img {
+    margin: 2em 0;
+  }
+  #loginPage .app-location input[type="text"],.app-location input[type="password"]{
+    width: 81.2%;
+    padding: 1.1em 1em 1.1em 4em;
+    color: #858282;
+    font-size: 16px;
+    outline: none;
+    background: #fff;
+    font-weight: 500;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    margin:0.7em 0;
+    background: url("../images/icons.png") no-repeat 14px 16px #474a55;
+    }
+  #loginPage .app-location input[type="password"]{
+        background: url("../../views/images/icons.png") no-repeat 13px -61px #474a55;
+    }
+  #loginPage .submit {
+    margin: 1em 0;
+    }
+  
+  #loginPage .app-location input[type="submit"]{
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    padding: 17px 15px;
+    width:100%;
+    border:3px solid #0bd38a;
+    background: #0bd38a;
+    border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+  }
+  #loginPage input[type="submit"]:hover{
+    background:none;
+    border: 3px solid #0bd38a;
+    color: #0bd38a;
+  
+  }
+  #loginPage .new {
+    margin: 4em 0 1em 0;
+  }
+  #loginPage .new h3{
+    float:left;
+  }
+  #loginPage .new h3 a,.new h4 a{
+    color:#78797C;
+    font-weight: 400;
+    font-size: 1em;
+  }
+  #loginPage .new h3 a:hover,.new h4 a:hover{
+    text-decoration: underline;
+  }
+  #loginPage .new h4{
+    float:right;
+  }
+  
+  
+  /*-----start-responsive-design------*/
+  @media (max-width:1440px){
+    #loginPage .app-location{
+      width:30%;
+    }
+    #loginPage .app-location input[type="text"],.app-location input[type="password"]{
+      width: 82.2%;
+      
+    }
+  }
+  @media (max-width:1366px){
+    #loginPage .app-location{
+    width:34%;
+    }
+    #loginPage .app-location input[type="text"], .app-location input[type="password"] {
+    width: 82.7%;
+    }
+    #loginPage .line span{
+    position: absolute;
+    top:10%;
+    left: 39%;
+    background: #5b5c61;
+    height: 1px;
+    width: 20%;
+  }
+  #loginPage body h1 {
+    font-size: 2.6em;
+  }
+      
+  }
+  @media (max-width:1280px){
+    #loginPage .app-location {
+    width: 37%;
+    }
+    
+  }
+  @media (max-width:1024px){
+    #loginPage .app-location {
+    width: 47%;
+  }
+   
+  }
+  @media (max-width:768px){
+    #loginPage body h1 {
+    font-size: 2.4em;
+    }
+    #loginPage .location img {
+    margin: 2em 0;
+    width: 59%;
+  }
+  #loginPage .app-location h2 {
+    padding: 0.8em 0;
+    font-size: 1.6em;
+  }
+  #loginPage .line span {
+    top: 10%;
+    left: 39%;
+    height: 1px;
+    width: 20%;
+  }
+  #loginPage .app-location {
+      width: 63%;
+  }
+}
+  
+   
+  @media (max-width:640px){
+    #loginPage body h1 {
+    font-size: 2.1em;
+  }
+  #loginPage .app-location {
+    width: 69%;
+  }
+  #loginPage .app-location input[type="text"], .app-location input[type="password"] {
+    width: 81%;
+  }
+  }
+  @media (max-width:480px){
+    
+    #loginPage .app-location {
+    width: 90%;
+    padding: 2em 1em 1em 1em;
+  }
+  
+  #loginPage .new h3 a, .new h4 a {
+    font-size: 0.9em;
+    }
+    #loginPage .form {
+    width: 82%;
+    margin: 0 auto;
+  }
+  #loginPage .app-location input[type="text"], .app-location input[type="password"] {
+    width: 76.8%;
+    margin: 0.4em 0;
+  }
+
+
+  #confirmPage .orderBar {
+    flex-direction: column;
+  }
+
+  #confirmPage .changeOrder {  
+    margin-left: 0;
+  }
+
+  #confirmPage .cancelOrder{  
+    margin-top: 30px;
+    margin-left: 0;
+  }
+
+
+  }
+  @media (max-width:320px){
+    #loginPage .app-location {
+    width: 87%;
+    padding: 2em 1em 1em 1em;
+  }
+  #loginPage .body h1 {
+    font-size: 1.5em;
+  }
+  
+  #loginPage .app-location input[type="text"], .app-location input[type="password"] {
+    width:68%;
+    padding: 1em 1em 1em 4em;
+    font-size: 15px;
+    background: url("../images/icons.png") no-repeat 14px 17px #474a55;
+    background-size: 11%;
+  }
+  #loginPage .app-location input[type="password"] {
+    background: url("../images/icons.png") no-repeat 14px -41px #474a55;
+    background-size: 11%;
+  }
+  #loginPage .app-location h2 {
+    padding: 0.5em 0;
+    font-size: 1.2em;
+  }
+  #loginPage .new h3 a, .new h4 a {
+    font-size: 0.75em;
+  }
+  #loginPage .new {
+    margin: 2em 0 1em 0;
+  }
+  #loginPage .line span {
+    top: 10%;
+    left: 35%;
+    height: 1px;
+    width: 29%;
+  }
+  #loginPage .submit {
+    margin: 0.5em 0;
+  }
+  #loginPage .app-location input[type="submit"] {
+    font-size: 18px;
+    padding: 11px 11px;
+    }
+    form {
+    width: 87%;
+    margin: 0 auto;
+  }
+
+  #confirmPage .orderBlock {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #confirmPage .orderBar {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #confirmPage .changeOrder {  
+  }
+
+  #confirmPage .cancelOrder{  
+    margin-top: 30px;
+  }
+}
+
+

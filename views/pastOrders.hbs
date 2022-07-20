@@ -1,0 +1,19 @@
+<section id = "confirmPage">
+    <div class = "header">
+        <h1>Past Orders &#129534;</h1>
+    </div>
+
+    <div class="pastorders-outer-div">
+    
+        {{#listOrders orders}} {{/listOrders}}
+
+        <div class = "buttonDiv-alt">
+            <form action="/customer/menu" method="GET">
+                <button type="submit" class="backtomenu" >Go back to menu &#9749;</button>
+            </form>
+        </div>
+
+    </div>
+
+    
+</section>

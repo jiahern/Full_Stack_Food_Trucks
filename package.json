@@ -1,0 +1,44 @@
+{
+  "name": "project-t18-hellozeus",
+  "version": "1.0.0",
+  "description": "**The University of Melbourne** # INFO30005 – Web Information Technologies",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "jest",
+    "clear_jest": "jest --clearCache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/INFO30005-2021-SM1/project-t18-hellozeus.git"
+  },
+  "author": "team hellozeus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/INFO30005-2021-SM1/project-t18-hellozeus/issues"
+  },
+  "homepage": "https://github.com/INFO30005-2021-SM1/project-t18-hellozeus#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcrypt-nodejs": "^0.0.3",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash-plus": "^0.2.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.0",
+    "express-session": "^1.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "mongoose": "^5.12.3",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "jest": "^27.0.1",
+    "supertest": "^6.1.3"
+  }
+}
